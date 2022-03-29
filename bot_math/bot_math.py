@@ -4,18 +4,18 @@ from discord.ext import commands
 from dotenv import load_dotenv
 
 load_dotenv(dotenv_path="config")
-bot = commands.Bot(command_prefix="!", description="Bot pour Réviser")
+bot = commands.Bot(command_prefix="&", description="Bot pour Réviser")
 
 @bot.event
 async def on_ready():
     print("___.           __                     __  .__     ")
     print("\\_ |__   _____/  |_     _____ _____ _/  |_|  |__  ")
-    print(" | __ \\ /  _ \\   __\\   /     \\__  \\   __\\  |  \\ ")
+    print(" | __ \\ /  _ \\   __\\   /     \\__  \\   __\\  |  \\")
     print(" | \\_\\ (  <_> )  |    |  Y Y  \\/ __ \\|  | |   Y  \\")
     print(" |___  /\\____/|__| /\\ |__|_|  (____  /__| |___|  /")
-    print("     \\/            \\/       \\/     \\/          \\/ ")
+    print("     \\/            \\/       \\/     \\/          \\/")
 
-    print("\n\nBot.Math is Ready!")
+    print("\nBot.Math is Ready! © by oxyblade")
 
 #aller sur l'ent de stephane hesssel
 @bot.command()
@@ -92,6 +92,14 @@ async def Ln(ctx):
 async def ProbaC(ctx):
     embed = discord.Embed(title = "Les Probabilitées Conditionnelles", url="https://stephane-hessel.mon-ent-occitanie.fr/lectureFichiergw.do?ID_FICHIER=1506290192580",description="[video: Probabilitée](https://www.youtube.com/watch?v=5oBnmZVrOXE&list=PLVUDmbpupCapoStVETZ2x6iy0vCua0HvK)", color = 0x334FFF)
     embed.set_image(url="https://cdn.discordapp.com/attachments/919369842916741224/944684224114479114/Screenshot_2022-02-19_at_20-56-42_probabilite_conditionnelle_Recherche_Google.png")
+    embed.set_footer(text = "fin du cour !")
+    await ctx.send(embed = embed)
+
+#nombre complexe
+@bot.command()
+async def complexe(ctx):
+    embed = discord.Embed(title = "Nombre complexe (Forme Exponentielle)", url="https://stephane-hessel.mon-ent-occitanie.fr/lectureFichiergw.do?ID_FICHIER=1506290196413",description="[video: complexe](https://www.youtube.com/watch?v=ABo2m52oEYw)", color = 0x334FFF)
+    embed.set_image(url="https://cdn.discordapp.com/attachments/917117165839192164/958111270349979759/Sans_titre.png")
     embed.set_footer(text = "fin du cour !")
     await ctx.send(embed = embed)
 
