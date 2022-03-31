@@ -1,9 +1,12 @@
 import os
 import discord
 from discord.ext import commands
-from dotenv import load_dotenv
+import json
 
-load_dotenv(dotenv_path="config")
+f = open('config.json')
+
+config = json.load(f)
+
 bot = commands.Bot(command_prefix="&", description="Bot pour Réviser")
 
 @bot.event
@@ -104,4 +107,4 @@ async def complexe(ctx):
     await ctx.send(embed = embed)
 
 #token bot
-bot.run(os.getenv("TOKEN"))
+bot.run(config['token'])
