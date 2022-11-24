@@ -1,5 +1,4 @@
-# bot-discord
-bot discord mathématique
+# bot-discord de mathematiques
 
 /!\ IMPORTANT /!\
 
